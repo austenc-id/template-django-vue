@@ -1,5 +1,7 @@
-# Portfolio Applications
+# Project Template
 
-## [Frontend](../client/readme.md)
-
-## [Backend](../server/readme.md)
+- Django
+- Vue
+- Bootstrap
+- SASS
+- github workflows
