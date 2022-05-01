@@ -1,0 +1,9 @@
+@import '../theme';
+
+main {
+    background-color: $espresso;
+    width: 100%;
+    margin: 2vw;
+    padding: 2vw;
+    @include box;
+}

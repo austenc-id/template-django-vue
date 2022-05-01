@@ -1,0 +1,22 @@
+@use './header';
+@use './forms';
+@use './nav';
+@use './section';
+@use './footer';
+
+@import '../theme';
+
+body {
+    font-family: $ubuntu;
+    background-color: $espresso;
+    #app {
+        background-color: $mocha;
+        color: $froth;
+        margin: 2vw;
+        padding: 2vw;
+        @include box(3px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,10 @@
+@import '../theme';
+
+footer {
+    background-color: $espresso;
+    width: 100%;
+    @include box;
+    font-size: .9rem;
+    margin: 2vw;
+    padding: 2vw;
+}

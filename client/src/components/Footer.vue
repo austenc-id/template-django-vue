@@ -1,6 +1,6 @@
 <template>
     <footer>
-        &copy;
+      <li>&copy; 2022 Austen C. Myers-Flachson</li>
     </footer>
   </template>
 

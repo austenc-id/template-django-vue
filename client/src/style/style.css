@@ -1,5 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 /*!
  * Bootstrap v5.0.2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10747,6 +10753,130 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+h1, h2, menu {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: capitalize;
+}
+
+button, input {
+  color: inherit;
+  background-color: inherit;
+}
+
+header {
+  background-color: #181515;
+  color: #2b4f72;
+  border-radius: 5px;
+  border: 1px solid #5c4646;
+  padding: 2vw;
+  width: 100%;
+}
+header h1 {
+  font-size: 3rem;
+  width: fit-content;
+}
+header #row-2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+header #row-2 h2 {
+  font-size: 2rem;
+  width: fit-content;
+}
+header #row-2 menu {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  border: 2px solid #5c4646;
+  padding: 1vw;
+}
+header #row-2 menu li {
+  width: fit-content;
+  cursor: pointer;
+  color: #327730;
+}
+
+form {
+  color: #a73729;
+  background-color: #181515;
+  border-radius: 5px;
+  border: 1px solid #5c4646;
+  padding: 2vw;
+  margin: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #4e7fad;
+}
+form label input {
+  background-color: #251d1d;
+  border-radius: 5px;
+  border: 1px solid #5c4646;
+  width: 80%;
+}
+form button {
+  background-color: #251d1d;
+  margin: 2vw;
+  border-radius: 5px;
+  border: 1px solid #5c4646;
+}
+
+nav {
+  background-color: #181515;
+  color: #327730;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #5c4646;
+  margin: 2vw;
+  padding: 2vw;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav svg {
+  cursor: pointer;
+  height: 75%;
+  width: 33%;
+}
+
+main {
+  background-color: #181515;
+  width: 100%;
+  margin: 2vw;
+  padding: 2vw;
+  border-radius: 5px;
+  border: 1px solid #5c4646;
+}
+
+footer {
+  background-color: #181515;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #5c4646;
+  font-size: 0.9rem;
+  margin: 2vw;
+  padding: 2vw;
+}
+
 body {
   font-family: "Ubuntu", sans-serif;
   background-color: #181515;
@@ -10756,10 +10886,11 @@ body #app {
   color: #5c4646;
   margin: 2vw;
   padding: 2vw;
-}
-
-li {
-  list-style: none;
+  border-radius: 5px;
+  border: 3px solid #5c4646;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

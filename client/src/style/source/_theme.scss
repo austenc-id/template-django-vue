@@ -1,31 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 $mocha: #251d1d;
 $espresso: #181515;
 $froth: #5c4646;
 $forest: #327730;
 $lava: #a73729;
+$deep-ocean: #2b4f72;
 $ocean: #2a5e8f;
 $wave: #4e7fad;
 $ubuntu: "Ubuntu", sans-serif;
 
-@mixin borders($size: 1px, $left: 1, $right: 1, $top: 1, $bottom: 1, $radius: 5) {
-    border-left: ($size * $left) solid;
-    border-right: ($size * $right) solid;
-    border-top: ($size * $top) solid;
-    border-bottom: ($size * $bottom) solid;
-    border-radius: 1px * $radius;
-}
-
-body {
-    font-family: $ubuntu;
-    background-color: $espresso;
-    #app {
-        background-color: $mocha;
-        color: $froth;
-        margin: 2vw;
-        padding: 2vw;
-    }
-}
-li {
-    list-style: none;
+@mixin box($thickness: 1px) {
+  border-radius: 5px;
+  border: $thickness solid $froth;
 }

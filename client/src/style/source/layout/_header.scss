@@ -1,0 +1,35 @@
+@import "../_theme.scss";
+
+header {
+  background-color: $espresso;
+  color: $deep-ocean;
+  @include box;
+  padding: 2vw;
+  width: 100%;
+  h1 {
+    font-size: 3rem;
+    width: fit-content;
+  }
+  #row-2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    h2 {
+      font-size: 2rem;
+      width: fit-content;
+    }
+    menu {
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+      font-size: 1.25rem;
+      @include box(2px);
+      padding: 1vw;
+      li {
+        width: fit-content;
+        cursor: pointer;
+        color: $forest;
+      }
+    }
+  }
+}

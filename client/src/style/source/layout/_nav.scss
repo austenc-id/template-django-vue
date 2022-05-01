@@ -1,0 +1,20 @@
+@import '../theme';
+
+nav{
+    background-color: $espresso;
+    color: $forest;
+    font-size: 1.5rem;
+    @include box;
+    margin: 2vw;
+    padding: 2vw;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    svg {
+        cursor: pointer;
+        height: 75%;
+        width: 33%;
+    }
+}
