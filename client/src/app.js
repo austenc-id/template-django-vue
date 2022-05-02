@@ -1,10 +1,14 @@
-import { createApp } from 'vue'
-import { createStore } from 'vuex'
-import Index from './Index.vue'
+import { createApp } from 'vue';
+import { createStore } from 'vuex';
+import Cookies from "js-cookie";
+import Index from './Index.vue';
+
 
 const store = createStore({
     state(){
         return {
+            csrftoken: Cookies.get('csrftoken'),
+            url: 'http://127.0.0.1:8000',
             active: {
                 form: {
                     login: false,
@@ -14,8 +18,8 @@ const store = createStore({
                     home: false,
                     profile: false,
                     settings: false,
-                }
-
+                },
+                user: false
               }
         }
     },
@@ -34,6 +38,9 @@ const store = createStore({
                     elements[key] = !elements[key]
                 }
             }
+        },
+        setActiveUser(state, {user}){
+            state.active.user = user
         }
     },
     actions: {},
