@@ -25,11 +25,16 @@ header {
       font-size: 1.25rem;
       @include box(2px);
       padding: 1vw;
+      color: $forest;
       li {
         width: fit-content;
         cursor: pointer;
-        color: $forest;
       }
+      svg {
+        cursor: pointer;
+        height: 25%;
+        width: 15%;
+    }
     }
   }
 }

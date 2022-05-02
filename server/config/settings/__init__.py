@@ -2,7 +2,8 @@ from .deployment import *
 from .components import *
 from .static import *
 from .database import *
-from .auth import *
+from .security import *
+from .auth0 import *
 
 
 LANGUAGE_CODE = 'en-us'
