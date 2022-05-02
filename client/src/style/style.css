@@ -10800,11 +10800,16 @@ header #row-2 menu {
   border-radius: 5px;
   border: 2px solid #5c4646;
   padding: 1vw;
+  color: #327730;
 }
 header #row-2 menu li {
   width: fit-content;
   cursor: pointer;
-  color: #327730;
+}
+header #row-2 menu svg {
+  cursor: pointer;
+  height: 25%;
+  width: 15%;
 }
 
 form {

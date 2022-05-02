@@ -1,14 +1,18 @@
 <template>
   <menu>
-    <li @click="renderForm('login')">login</li>
-    <li @click="renderForm('register')">register</li>
+    <!-- <li @click="renderForm('login')">login</li>
+    <li @click="renderForm('register')">register</li> -->
+    <Auth0/>
   </menu>
 </template>
 
 <script>
+  import Auth0 from './auth0'
 export default {
   name: "ActionMenu",
-  components: {},
+  components: {
+    Auth0
+  },
   methods: {
     async renderForm(form) {
       console.log(`rendering ${form}`)
