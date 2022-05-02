@@ -1,3 +1,6 @@
-node_modules
-.env
+# Temporary Files
 __pycache__
+
+# Environments
+client/node_modules
+server/pyenv

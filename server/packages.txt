@@ -1,0 +1,8 @@
+autopep8
+django
+djangorestframework
+psycopg2
+django-cors-headers
+cryptography
+djangorestframework-jwt
+python-jose
