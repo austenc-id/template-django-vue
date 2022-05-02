@@ -18,5 +18,8 @@
         "titleBar.inactiveBackground": "#003e8099",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#003e80"
+    "peacock.color": "#003e80",
+    "cSpell.words": [
+        "jwks"
+    ]
 }
