@@ -11,5 +11,10 @@ $ubuntu: "Ubuntu", sans-serif;
 
 @mixin box($thickness: 1px) {
   border-radius: 5px;
-  border: $thickness solid $froth;
+  border: $thickness solid;
+}
+
+@mixin circle($thickness: 5px) {
+  border-radius: 50%;
+  border: $thickness solid;
 }

@@ -1,7 +1,9 @@
 <template>
+  <main id="main">
     <Home v-if="active.home"/>
     <Profile v-if="active.profile"/>
     <Settings v-if="active.settings"/>
+  </main>
 </template>
 
 <script>
@@ -15,6 +17,8 @@ export default {
     Home,
     Profile,
     Settings,
+  },
+  updated(){
   },
   data() {
     return{

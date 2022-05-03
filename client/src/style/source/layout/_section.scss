@@ -1,9 +1,56 @@
-@import '../theme';
+@import "../theme";
 
 main {
-    background-color: $espresso;
-    width: 100%;
-    margin: 2vw;
-    padding: 2vw;
+  background-color: $espresso;
+  width: 100%;
+  margin: 2vw;
+  padding: 2vw;
+  @include box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  div.profile-header {
+    display: flex;
+    align-items: center;
+    width: 94%;
+    margin: 2.5% 2% 4% 3%;
+    img {
+      @include circle;
+      width: 30%;
+      height: 30%;
+    }
+    div.user-identification {
+      width: 70%;
+      margin-top: 2.5%;
+      display: flex;
+      flex-direction: column;
+      h3 {
+        margin: 0%;
+        font-size: 2rem;
+        height: fit-content;
+        width: 100%;
+        margin-left: 4%;
+      }
+      li {
+        margin-left: 8%;
+      }
+    }
+    span {
+      @include box;
+      padding: 1%;
+      align-self: flex-start;
+    }
+  }
+  p {
+    margin: 3%;
     @include box;
+    text-indent: 1rem;
+    padding: 2%;
+    background-color: $mocha;
+  }
+  button {
+    border: 1px solid;
+    margin: 2.5%;
+    @include box;
+  }
 }

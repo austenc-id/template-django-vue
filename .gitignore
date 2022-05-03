@@ -1,6 +1,8 @@
 # Temporary Files
 __pycache__
+actions.js
 
 # Environments
 client/node_modules
 server/pyenv
+bootstrap

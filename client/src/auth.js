@@ -1,5 +1,6 @@
 import auth0 from "auth0-js";
 import EventEmitter from "eventemitter3";
+import Cookies from "js-cookie";
 
 export default class AuthService {
   authenticated = this.isAuthenticated();
@@ -29,26 +30,24 @@ export default class AuthService {
   }
   // this method calls the parseHash() method of Auth0
   // to get authentication information from the callback URL
-  handleAuthentication () {
+  handleAuthentication() {
     // users returning from Auth0 (after authentication) will have params on the hash
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
-        this.setSession(authResult)
+        this.setSession(authResult);
       } else if (err) {
-        console.log(err)
-        alert(`Error: ${err.error}. Check the console for further details.`)
+        console.log(err);
       } else {
         // no authResult and no error? lets try silent auth
         this.silentAuth()
           .then(() => {
-            console.log('user logged in through silent auth')
+            console.log("user logged in through silent auth");
           })
           .catch((err) => {
-            console.log(err)
-            alert(`Error: ${err.error}. Check the console for further details.`)
-          })
+            console.log(err);
+          });
       }
-    })
+    });
   }
   // stores the user's access_token, id_token, and a time at
   // which the access_token will expire in the local storage
@@ -62,10 +61,17 @@ export default class AuthService {
   // remove the access and ID tokens from the
   // local storage and emits the authChange event
   logout() {
+    this.auth0.logout({
+      returnTo: "http://localhost:8080/v2/logout",
+      clientID: "afxESO4wkDBybFOIsF13Wf4gg9KFgOVl",
+      federated: true
+    });
+    this.auth0.redirect(window.location.reload)
     delete this.accessToken;
     delete this.idToken;
     delete this.expiresAt;
-    this.authNotifier.emit("authChange", false);
+    delete this.profile;
+    this.authNotifier.emit("authChange", { authenticated: false });
   }
   // checks if the user is authenticated
   isAuthenticated() {
@@ -82,13 +88,13 @@ export default class AuthService {
   getUserProfile(cb) {
     return this.profile;
   }
-  silentAuth () {
+  silentAuth() {
     return new Promise((resolve, reject) => {
       this.auth0.checkSession({}, (err, authResult) => {
-        if (err) return reject(err)
-        this.setSession(authResult)
-        resolve()
-      })
-    })
+        if (err) return reject(err);
+        this.setSession(authResult);
+        resolve();
+      });
+    });
   }
 }

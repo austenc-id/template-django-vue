@@ -5,17 +5,17 @@
       </div>
       <div id="row-2">
         <h2>subtitle</h2>
-        <ActionMenu />
+        <Auth0/>
       </div>
     </header>
 </template>
 
 <script>
-import ActionMenu from "./Header/ActionMenu.vue";
+import Auth0 from "./auth0";
 export default {
   name: "Header",
   components: {
-    ActionMenu,
+    Auth0,
   },
 };
 </script>

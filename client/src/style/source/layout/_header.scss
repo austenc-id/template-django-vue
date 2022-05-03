@@ -21,6 +21,7 @@ header {
     menu {
       display: flex;
       justify-content: space-around;
+      align-items: center;
       width: 50%;
       font-size: 1.25rem;
       @include box(2px);
@@ -32,9 +33,7 @@ header {
       }
       svg {
         cursor: pointer;
-        height: 25%;
-        width: 15%;
-    }
+      }
     }
   }
 }
